@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的图书馆</title>
+    <link rel="stylesheet" href="assets/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="assets/css/font-awesome.min.css">-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<!--导航栏-->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img src="assets/image/libraryLogo.png" alt="">
+            &nbsp;
+            &nbsp;
+            <img src="assets/image/libraryFont.png" alt="">
+        </a>
+        <div class="burger navbar-burger" data-target="navbarBurger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="navbar-menu" id="navbarBurger">
+        <div class="navbar-start">
+            <div class="navbar-item is-hoverable">
+                <a class="navbar-item">
+                    书目检索
+                </a>
+                <a class="navbar-item">
+                    开馆时间
+                </a>
+                <a class="navbar-item">
+                    常见问题
+                </a>
+                <a class="navbar-item">
+                    借阅规则
+                </a>
+                <a class="navbar-item">
+                    联系我们
+                </a></div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a id="login-modal-launcher" class="is-primary is-outlined button">
+                            <span>登录</span>
+                        </a>
+
+                    </p>
+                    <p class="control">
+                        <a id="signup-modal-launcher" class="button">
+                            <span>注册</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--登录模态框-->
+<div id="login-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <span class="icon has-text-info is-medium">
+                <i class="fa fa-sign-in fa-2x"></i>
+            </span>
+            &nbsp;
+            &nbsp;
+            <p class="modal-card-title">登录</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <div class="container is-fluid">
+
+                <div class="field">
+                    <label class="label">邮箱</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id="loginEmail" class="input" type="email" placeholder="请输入邮箱">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-envelope"></i>
+                        </span>
+                    </div>
+                    <p id="loginEmailHelper" class="help is-danger is-hidden">邮箱格式不正确！</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">密码</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input id="loginPassword" class="input" type="password" placeholder="字母与数字的组合">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-key"></i>
+                        </span>
+                    </div>
+                    <p id="loginPasswordHelper" class="help is-danger is-hidden">密码格式不正确！</p>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button id="loginConfirm" class="button is-success">确定</button>
+            <button id="loginReset" class="button">清空</button>
+            <p id="loginPassHelper" class="help is-danger is-hidden is-size-6">表单有错，无法提交！</p>
+        </footer>
+    </div>
+</div>
+
+<!--注册模态框-->
+<div id="signup-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <span class="icon has-text-info is-medium">
+                <i class="fa fa-id-card-o fa-2x"></i>
+            </span>
+            &nbsp;
+            &nbsp;
+            <p class="modal-card-title">注册</p>
+            <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <!-- Content ... -->
+            <div class="field">
+                <label class="label">姓名*</label>
+                <div class="control has-icons-left">
+                    <input id="signUpUserName" class="input" type="text" placeholder="请输入姓名" required>
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-smile-o"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">学号*</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input id="signUpStudentID" class="input" type="text" placeholder="请输入学号" required>
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right is-hidden">
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                    </span>
+                </div>
+                <p id="signUpStudentIDHelperFormat" class="help is-danger is-hidden">只接受纯数字</p>
+                <p id="signUpStudentIDHelperExist" class="help is-danger is-hidden">已注册,请<a id="signUpJumpLogin">登录</a></p>
+            </div>
+
+            <div class="field">
+                <label class="label">邮箱*</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input id="signUpEmail" class="input" type="email" placeholder="请输入邮箱" required>
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-envelope"></i>
+                    </span>
+
+                </div>
+                <p id="signUpEmailHelper" class="help is-danger is-hidden">邮箱不合法</p>
+            </div>
+            <div class="field">
+                <label class="label">密码*</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input id="signUpPassword" class="input" type="password" placeholder="字母与数字的组合" required>
+                    <span class="icon is-small is-left">
+                            <i class="fa fa-key"></i>
+                        </span>
+                </div>
+                <p id="signUpPasswordHelper" class="help is-danger is-hidden">密码格式不正确！</p>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button id="signUpConfirm" class="button is-success">提交</button>
+            <button id="signUpReset" class="button">重填</button>
+            <p id="signPassHelper" class="help is-danger is-hidden is-size-6">表单有错，无法提交！</p>
+        </footer>
+    </div>
+</div>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
