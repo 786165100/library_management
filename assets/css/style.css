@@ -1,3 +1,22 @@
 .navbar-item{
     margin:0 0.8rem
 }
+span{
+    display: inline-block;
+}
+.nav-tabs{
+    margin-top: 8rem;
+    display: none;
+}
+.nav-tabs li{
+    margin: 2rem 1rem;
+}
+.center th,.center td{
+    text-align: center;
+}
+.icon{
+    overflow: hidden;
+}
+.image-radius{
+    border-radius: 1rem;
+}
