@@ -1,5 +1,4 @@
 $(function() {
-   // var $nav_tabs=$(".nav-tabs").hide();
     $(".delete").click(function () {
         $(this).closest(".modal").removeClass("is-active");
     });
@@ -150,7 +149,7 @@ $(function() {
     });
 
 //注册重置按钮
-    $signUpReset.click(function () {
+    $signUpReset.click(function (){
         $signUpUserName.val("");
         $signUpStudentID.val("").removeClass("is-danger");
         $signUpEmail.val("").removeClass("is-danger");
@@ -168,8 +167,11 @@ $(function() {
     /*******************校验函数 *****************************/
 //验证密码字母与数字的组合
     function validatePassword(str) {
-        var mat = str.match("^[A-Za-z0-9]+$");
-        return mat;
+        var regNumber=/\d+/;
+        var regString=/[a-zA-Z]+/;
+        var matAlpha = regNumber.test(str);
+        var matNum=regString.test(str);
+        return matNum&&matAlpha;
     }
 
 
@@ -185,8 +187,8 @@ $(function() {
 
 //验证纯数字
     function validatePureNumber(str) {
-        var mat = str.match("^[0-9]+$");
-        return mat;
+        return  str.match("^[0-9]+$");
+
     }
 
     /*******************校验函数结束 *****************************/

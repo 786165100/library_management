@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>***的个人信息</title>
+    <link rel="stylesheet" href="assets/css/bulma.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/individual.css">
+</head>
+<body>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand" title="返回首页">
+        <a class="navbar-item" href="index.html">
+            <img src="assets/image/libraryLogo.png" alt="">
+            &nbsp;
+            &nbsp;
+            <!--<img src="assets/image/libraryFont.png" alt="">-->
+        </a>
+
+    </div>
+    <div class="navbar-menu" id="navbarBurger">
+        <div class="is-white head-text">
+            DashBoard Management System
+        </div>
+        <div class="navbar-end">
+            <div class="navbar-item last-item">
+                <div class="field is-grouped">
+                    <a id="logout-launcher" class="button">
+                        <span>退出</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<span class="pull-down">
+        <i class="fa fa-list-ul"></i>
+</span>
+<div class="columns">
+    <div class="column is-one-quarter">
+        <aside class="menu">
+
+            <p class="menu-label">
+                General
+            </p>
+            <ul class="menu-list">
+                <li class="on-active"><a><i class="fa fa-user-o"></i>&nbsp;&nbsp;个人信息</a></li>
+                <li><a><i class="fa fa-book"></i>&nbsp;&nbsp;图书信息</a></li>
+            </ul>
+            <p class="menu-label">
+                Other
+            </p>
+            <ul class="menu-list">
+                <li><a><i class="fa fa-edit"></i>&nbsp;&nbsp;我的书评</a></li>
+
+            </ul>
+
+        </aside>
+    </div>
+    <div class="column content">
+        <div class="tabs">
+            <ul>
+                <li class="is-active"><a>我的首页</a></li>
+                <li><a>个人资料</a></li>
+                <li><a>修改信息</a></li>
+            </ul>
+        </div>
+        <div class="tabs">
+            <ul>
+                <li class="is-active"><a>当前借阅</a></li>
+                <li><a>借阅历史</a></li>
+                <li><a>借阅分析</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/individual.js"></script>
+</body>
+</html>
