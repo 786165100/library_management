@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
+<div id="particles-js"></div>
 <!--导航栏-->
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -52,7 +52,7 @@
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <a id="login-modal-launcher" class="is-primary is-outlined button">
+                        <a id="login-modal-launcher" class="is-info is-outlined button">
                             <span>登录</span>
                         </a>
 
@@ -70,10 +70,31 @@
 
 <!--页面主体--->
 <main>
+    <!--书目检索主页-->
+    <div id="bookSearchTab" class="nav-tabs">
+        <div class="columns">
+            <div class="column">
+                <table class="table is-bordered is-fullwidth">
+                    <thead>
+                    <tr>
+                        <th class="has-text-centered">开放时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="has-text-centered">
+                            8:00~22:00
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <!---开馆时间--->
     <div id="openCloseTimeTab" class="nav-tabs">
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
+            <div class="column">
                 <table class="table is-bordered is-fullwidth">
                     <thead>
                     <tr>
@@ -94,51 +115,54 @@
     <!---常见问题---->
     <div id="FAQTab" class="nav-tabs">
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
-                <ul class="question-list">
-                    <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;为什么“超星数字图书馆”里的书可看但无法下载？</a></li>
-                    <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;“远程访问”无法使用，提示“服务器认证失败”等，如何解决？</a></li>
-                    <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;PDF格式被强制用阿帕比阅读器或书生阅读器打开，如何改回？</a></li>
-                    <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;我馆与全国高校馆进行的原文传递采取的是何系统？</a></li>
-                    <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;如何登陆网上图书馆？</a></li>
-
-                </ul>
+            <div class="column">
+                <div class="box">
+                    <ul class="question-list">
+                        <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;为什么“超星数字图书馆”里的书可看但无法下载？</a></li>
+                        <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;“远程访问”无法使用，提示“服务器认证失败”等，如何解决？</a></li>
+                        <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;PDF格式被强制用阿帕比阅读器或书生阅读器打开，如何改回？</a></li>
+                        <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;我馆与全国高校馆进行的原文传递采取的是何系统？</a></li>
+                        <li><a href="#"><i class="fa fa-play"></i>&nbsp;&nbsp;如何登陆网上图书馆？</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <!---使用方法---->
     <div id="useMethodTab" class="nav-tabs">
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
-                <ul>
-                    <li>网上图书馆也称“我的图书馆”，是汇文文献信息服务系统，网上功能的总称。“我的图书馆”提供读者网上个性化的服务。登录“我的图书馆”后，用户能直接查询自己的借阅信息，预约图书、续借图书,
-                        收藏自己喜欢的书刊。
-                    </li>
-                    <li>
-                        <strong>1. 开通“我的图书馆”</strong>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;点击右上角注册按钮,按照提示进行注册,数据格式不正确是无法提交数据的</p>
-                    </li>
-                    <li>
-                        <strong>2.登录“我的图书馆”</strong>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;注册完毕后，点击登录按钮，在弹出的登录对话框中输入信息完成登录，
-                            然后页面跳转到我的图书信息管理界面
-                        </p>
-                    </li>
-                    <li>
-                        <strong>3. 暂时没想好</strong>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;点击右上角注册按钮,按照提示进行注册,数据格式不正确是
-                            无法提交数据的点击右上角注册按钮,按照提示进行注册,数据格式不正确是无法提交数据的
-                        </p>
-                    </li>
-                    <li></li>
-                </ul>
+            <div class="column">
+                <div class="box">
+                    <ul>
+                        <li>网上图书馆也称“我的图书馆”，是汇文文献信息服务系统，网上功能的总称。“我的图书馆”提供读者网上个性化的服务。登录“我的图书馆”后，用户能直接查询自己的借阅信息，预约图书、续借图书,
+                            收藏自己喜欢的书刊。
+                        </li>
+                        <li>
+                            <strong>1. 开通“我的图书馆”</strong>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;点击右上角注册按钮,按照提示进行注册,数据格式不正确是无法提交数据的</p>
+                        </li>
+                        <li>
+                            <strong>2.登录“我的图书馆”</strong>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;注册完毕后，点击登录按钮，在弹出的登录对话框中输入信息完成登录，
+                                然后页面跳转到我的图书信息管理界面
+                            </p>
+                        </li>
+                        <li>
+                            <strong>3. 暂时没想好</strong>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;点击右上角注册按钮,按照提示进行注册,数据格式不正确是
+                                无法提交数据的点击右上角注册按钮,按照提示进行注册,数据格式不正确是无法提交数据的
+                            </p>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <!---借阅规则---->
     <div id="lendingRulesTab" class="nav-tabs">
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
+            <div class="column">
                 <table class="table is-striped is-fullwidth is-bordered center">
                     <thead>
                     <tr>
@@ -188,7 +212,7 @@
     <!---联系我们---->
     <div id="contactUsTab" class="nav-tabs">
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
+            <div class="column">
                 <div class="box">
                     <article class="media">
                         <div class="media-left">
@@ -209,17 +233,17 @@
                                 <div class="level-left">
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="http://wpa.qq.com/msgrd?v=3&uin=1597700958&site=qq&menu=yes"><i
+                                                          href="http://wpa.qq.com/msgrd?v=3&uin=1597700958&site=qq&menu=yes"><i
                                                 class="portrait-icon fa fa-qq fa-lg" title="打开QQ"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://weibo.com/u/2448754637"><i
+                                                          href="https://weibo.com/u/2448754637"><i
                                                 class="portrait-icon fa fa-weibo fa-lg" title="打开微博"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://github.com/hansonfang"><i
+                                                          href="https://github.com/hansonfang"><i
                                                 class="portrait-icon fa fa-github fa-lg"
                                                 title="打开github"></i></a></span>
                                     </a>
@@ -231,7 +255,7 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
+            <div class="column">
                 <div class="box">
                     <article class="media">
                         <div class="media-left">
@@ -252,17 +276,17 @@
                                 <div class="level-left">
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="http://wpa.qq.com/msgrd?v=3&uin=786165100&site=qq&menu=yes"><i
+                                                          href="http://wpa.qq.com/msgrd?v=3&uin=786165100&site=qq&menu=yes"><i
                                                 class="portrait-icon fa fa-qq fa-lg" title="打开QQ"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://weibo.com/u/5798272977"><i
+                                                          href="https://weibo.com/u/5798272977"><i
                                                 class="portrait-icon fa fa-weibo fa-lg" title="打开微博"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://github.com/786165100"><i
+                                                          href="https://github.com/786165100"><i
                                                 class="portrait-icon fa fa-github fa-lg"
                                                 title="打开github"></i></a></span>
                                     </a>
@@ -274,7 +298,7 @@
             </div>
         </div>
         <div class="columns">
-            <div class="column is-offset-one-quarter is-half">
+            <div class="column">
                 <div class="box">
                     <article class="media">
                         <div class="media-left">
@@ -295,17 +319,17 @@
                                 <div class="level-left">
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="http://wpa.qq.com/msgrd?v=3&uin=786165100&site=qq&menu=yes"><i
+                                                          href="http://wpa.qq.com/msgrd?v=3&uin=786165100&site=qq&menu=yes"><i
                                                 class="portrait-icon fa fa-qq fa-lg" title="打开QQ"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://weibo.com/u/5798272977"><i
+                                                          href="https://weibo.com/u/5798272977"><i
                                                 class="portrait-icon fa fa-weibo fa-lg" title="打开微博"></i></a></span>
                                     </a>
                                     <a class="level-item">
                                         <span class=""><a target="_blank"
-                                                                        href="https://github.com/786165100"><i
+                                                          href="https://github.com/786165100"><i
                                                 class="portrait-icon fa fa-github fa-lg"
                                                 title="打开github"></i></a></span>
                                     </a>
@@ -317,7 +341,6 @@
             </div>
         </div>
     </div>
-
 </main>
 
 <!--登录模态框-->
@@ -439,6 +462,8 @@
 </div>
 
 <script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/particles.min.js"></script>
 <script src="assets/js/script.js"></script>
+
 </body>
 </html>

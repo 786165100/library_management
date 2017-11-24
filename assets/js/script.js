@@ -40,7 +40,9 @@ $(function() {
     });
 
 //登录输入密码键盘弹起时触发
-    $loginPassword[0].onkeyup = function () {
+    $loginPassword[0].addEventListener("onkeyup",$loginPasswordonkeyup);
+    $loginPassword[0].addEventListener("input",$loginPasswordonkeyup);
+    function $loginPasswordonkeyup () {
         var passwordString = $(this).val();
         var validate = validatePassword(passwordString);
         if (validate) {
@@ -51,7 +53,7 @@ $(function() {
             $loginPassWordHelper.removeClass("is-hidden");
         }
         PassloginPass = validate;
-    };
+    }
 
 //确认提交登录表单
     $("#loginConfirm").click(function () {
@@ -196,6 +198,7 @@ $(function() {
 
     /*******************导航栏标签页切换 ******************************/
     var $navbarButtons = $("#navbar-tab").find("a");
+    // $("#bookSearchTab").css("display","block");
     $navbarButtons.each(function (index, elem) {
         elem.onclick = function () {
             var id = $(this).attr("id");
@@ -205,5 +208,15 @@ $(function() {
     /*******************导航栏标签页切换结束 ***************************/
     
     /*******************联系我们 ************************************/
+
+
+
+    /*******************背景粒子 ************************************/
+
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+    /*******************背景粒子结束************************************/
+
 
 });
